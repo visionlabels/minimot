@@ -10,6 +10,7 @@
         <script src="jspsych/plugins/jspsych-html-button-response.js"></script>
         <script src="jspsych/plugins/jspsych-instructions.js"></script>
         <script src="jspsych/plugins/jspsych-survey-html-form.js"></script>
+        <script src="jspsych/plugins/jspsych-preload.js"></script>
         <script src="jspsych-plugin-mot.js"></script>
         <script src="tracks.js"></script>        
         <link href="jspsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
@@ -48,6 +49,14 @@
         return a;
       }
       // Intro ----------------
+      var preload = {
+        type: "preload",
+        images: ["resources/ufostory.png", "resources/mot_01.png", 
+          "resources/mot_02a.png", "resources/mot_03a.png",
+          "resources/mot_04.png", "resources/ufo.png",
+          "resources/celebrate.png"
+        ]
+      }
       var instruction = {
         type: 'instructions',
         pages: [
