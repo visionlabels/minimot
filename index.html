@@ -20,7 +20,14 @@
       select.myf { width: 5em; padding: 8px 20px; border: none; border-radius: 4px; background-color: #f1f1f1; font-size: 18px; }
       p.myq { width: 600px; text-align: left; }
       input.myi { width: 100%; padding: 8px 20px; margin: 8px 0; box-sizing: border-box; font-size: 24px; }
-      canvas#paper {  display: block;  margin: 0 auto;}
+      canvas#paper {
+        
+  /*width: 90vw;  */        /* 90% of the viewport width */
+  /*height: 90vw;    */     /* same as width → square */
+  display: block;
+  margin: 0 auto;       /* center horizontally */
+
+      }
     </style>
   </head>
   <body style="background-color: black; overflow: hidden; color: white; "><!-- page content -->
@@ -30,7 +37,7 @@
     <script>
       var runOnServer = (typeof jatos !== 'undefined');
       var total_score = 0;
-      var pixelsPerDegree = 32; // XXX24; //22;
+      var pixelsPerDegree = 2*32; // XXX24; //22;
       function shuffle(a) {
         var j, x, i;
         for (i = a.length - 1; i > 0; i -= 1) {

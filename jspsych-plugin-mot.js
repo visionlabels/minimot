@@ -566,21 +566,21 @@ jsPsych.plugins.mot = (function () {
     const originalBackgroundColor = displayElement.style.backgroundColor;
 
     // Remove the margins and paddings of the display_element
-    //XXXdisplayElement.style.margin = 0;
-    //XXXdisplayElement.style.padding = 0;
+    //XXX displayElement.style.margin = 0;//XXX
+    //XXX displayElement.style.padding = 0;//XXX
     // Match the background of the display element to the background color of the canvas so that the removal of the canvas at the end of the trial is not noticed
     displayElement.style.backgroundColor = backgroundColor;
 
     // Remove the margins and padding of the canvas
-    //XXXcanvas.style.margin = 0;
-    //XXXcanvas.style.padding = 0;
+    //XXXcanvas.style.margin = 0;//XXX
+    //XXXcanvas.style.padding = 0;//XXX
 
     // Get the context of the canvas so that it can be painted on.
     ctx = canvas.getContext("2d");
 
     // Declare variables for width and height, and also set the canvas width and height to the window width and height
-    canvas.width = 320;  //XXXwindow.innerWidth - 0;
-    canvas.height = 320;  //XXXwindow.innerHeight - pbHeight;
+    canvas.width = 2 * 320;  //XXXwindow.innerWidth - 0;
+    canvas.height = 2 * 320;  //XXXwindow.innerHeight - pbHeight;
 
     // Set the canvas background color
     canvas.style.backgroundColor = backgroundColor;
