@@ -579,8 +579,8 @@ jsPsych.plugins.mot = (function () {
     ctx = canvas.getContext("2d");
 
     // Declare variables for width and height, and also set the canvas width and height to the window width and height
-    canvas.width = 2 * 320;  //XXXwindow.innerWidth - 0;
-    canvas.height = 2 * 320;  //XXXwindow.innerHeight - pbHeight;
+    canvas.width = 45 * 8;  //XXXwindow.innerWidth - 0;
+    canvas.height = 45 * 8;  //XXXwindow.innerHeight - pbHeight;
 
     // Set the canvas background color
     canvas.style.backgroundColor = backgroundColor;

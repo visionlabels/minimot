@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attention experiment</title>
         <!-- <script src="jatos.js" type='text/javascript'></script> -->
         <script src="jspsych/jspsych.js"></script>
@@ -15,11 +16,9 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- <script src="script.js" type="text/javascript"></script> -->
     <style>
-      p.instr { width: 320px; height: 450px; text-align: left; }
-      img.instrimg { width: 320px; margin-left: auto; margin-right: auto; display: block; }
-      select.myf { width: 5em; padding: 8px 20px; border: none; border-radius: 4px; background-color: #f1f1f1; font-size: 18px; }
-      p.myq { width: 600px; text-align: left; }
-      input.myi { width: 100%; padding: 8px 20px; margin: 8px 0; box-sizing: border-box; font-size: 24px; }
+      p.instr { width: 80%; height: 500px; text-align: left;margin: 0 auto; }
+      img.instrimg { width: 80%; margin-left: auto; margin-right: auto; display: block; }
+
       canvas#paper {
         
   /*width: 90vw;  */        /* 90% of the viewport width */
@@ -37,7 +36,7 @@
     <script>
       var runOnServer = (typeof jatos !== 'undefined');
       var total_score = 0;
-      var pixelsPerDegree = 2*32; // XXX24; //22;
+      var pixelsPerDegree = 45; // XXX24; //22;
       function shuffle(a) {
         var j, x, i;
         for (i = a.length - 1; i > 0; i -= 1) {
@@ -110,7 +109,7 @@
       }
       var next_trial = {
         type: 'html-button-response',
-        stimulus: '<p></p>',
+        stimulus: () =>  `Skóre: <b>${total_score}</b><br><p></p>` ,
         choices: ['>>>'],
         prompt: "<p></p>"
       };  
@@ -131,7 +130,7 @@
         },
         choices: [],
         trial_duration: null,
-        prompt: "<p>Děkujeme za účast. Podobné experimenty nám pomáhají pochopit, jak funguje lidská pozornost.<br><b>Tuto obrazovku ukažte u stánku Psychologického ústavu AV ČR.</b></p>"
+        prompt: "<p>Děkujeme za účast. <br>Podobné experimenty nám pomáhají pochopit, jak funguje lidská pozornost.<br><br><b>Až budete se svým výkonem spokojeni, ukažte tuto obrazovku u stánku <b>Psychologického ústavu AV ČR.</b></p>"
       };
 
       // --- trial specs -------
