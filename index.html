@@ -132,14 +132,16 @@
           } else {
             s = `<h1>${total_score} z 10</h1>`;
             if (total_score < 5) {
-              s += "Zkuste to ještě jednou."
+              s += `Zkuste to ještě <a href="javascript:window.location.reload(true)">jednou</a>.`
             }
           }
           return s;
         },
         choices: [],
         trial_duration: null,
-        prompt: "<p>Děkujeme za účast. <br>Podobné experimenty nám pomáhají pochopit, jak funguje lidská pozornost.<br><br><b>Až budete se svým výkonem spokojeni, ukažte tuto obrazovku u stánku <b>Psychologického ústavu AV ČR.</b></p>"
+        prompt: "<p>Děkujeme za účast. " + 
+          "<br>Podobné experimenty nám pomáhají pochopit, jak funguje lidská pozornost.<br><br>"+
+          "<b>Pokud máte alespoň 5 bodů, ukažte tuto obrazovku u stánku Psychologického ústavu AV ČR.</b></p>"
       };
 
       // --- trial specs -------
